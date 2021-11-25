@@ -1,4 +1,456 @@
-.main{
+@import url("https://fonts.googleapis.com/css2?family=Sanchez&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/sansation");
+@import url("https://fonts.googleapis.com/css2?family=Sarala&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+html {
+  background: url(./bg/clear.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+html.clear {
+  background: url(./bg/clear.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+html.clear-night {
+  background: url(./bg/clearnight.jfif) no-repeat center center fixed;
+  background-size: cover;
+}
+html.rain {
+  background: url(./bg/rain.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+html.clouds {
+  background: url(./bg/cloudy.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+html.snow {
+  background: url(./bg/snow.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+html.thunderstorm {
+  background: url(./bg/thunderstorm.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.alt-2-search {
+  position: relative;
+  top: 0;
+}
+
+.disabled-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  overflow: hidden;
+}
+.disabled-container p {
+  font-family: "Sansation", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 2.4rem;
+}
+.disabled-container form {
+  width: 100%;
+  /* margin-left: auto; */
+}
+.disabled-container form input {
+  width: 90%;
+  height: 4rem;
+  font-size: 1.3rem;
+}
+.disabled-container form button {
+  width: 10%;
+  height: 4rem;
+}
+header h1 {
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: "Sansation", sans-serif;
+  font-weight: bold;
+  margin-left: 0.4rem;
+  margin-top: 0.2rem;
+}
+.sidebar {
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  width: 30rem;
+  height: 102%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+}
+.forecast {
+  display: none;
+}
+.alt-search {
+  display: none;
+}
+.date-container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #ffffffff;
+}
+
+.date-container h1 {
+  font-family: "Sanchez", sans-serif;
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+
+.date-container span {
+  font-size: 3rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#next,
+#previous {
+  cursor: pointer;
+}
+.data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+  font-family: "Sansation", sans-serif;
+  font-weight: bold;
+  color: #ffffffff;
+  margin-top: 8rem;
+  font-size: 0.8rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.search-container * {
+  outline: none;
+  border: none;
+}
+
+.search-container input {
+  width: 80%;
+  height: 3.5rem;
+  color: #ffffffff;
+  font-family: "Sansation", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  padding-left: 0.4rem;
+}
+.search-container input::placeholder {
+  color: #fff;
+}
+.search-container input,
+textarea {
+  background: rgba(0, 0, 0, 10%);
+}
+.search-container button {
+  width: 20%;
+  height: 3.6rem;
+  font-size: 2.3rem;
+  background: rgba(0, 0, 0, 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+.search-container button span {
+  color: #ffff;
+  background: transparent;
+}
+.alt-search {
+  display: none;
+}
+.main-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: absolute;
+  bottom: -3rem;
+  gap: 3rem;
+  color: #ffff;
+  margin-left: 1rem;
+}
+.temp {
+  font-family: "Sarala", sans-serif;
+  font-size: 3rem;
+  margin-top: -2rem;
+}
+.temp h1 {
+  font-weight: normal;
+}
+.icon svg {
+  width: 9rem;
+  height: 9rem;
+  margin-left: -0.4rem;
+}
+.location {
+  display: flex;
+  flex-direction: column;
+  margin-left: -2rem;
+}
+.location h1 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+.location p {
+  font-family: "Sansation", sans-serif;
+  margin-top: -1rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1200px) {
+  .main-container {
+    bottom: 0;
+  }
+  .temp {
+    font-size: 2rem;
+  }
+  .location h1 {
+    font-size: 3rem;
+  }
+  .location p {
+    font-size: 1rem;
+  }
+  .location {
+    margin-right: -2rem;
+  }
+  .icon svg {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .data-container h1 {
+    font-size: 1.4rem;
+  }
+  .search-container input {
+    height: 2.8rem;
+    font-size: 1rem;
+  }
+  .search-container button {
+    font-size: 2rem;
+    height: 2.9rem;
+  }
+  .date-container h1 span {
+    font-size: 1.4rem;
+  }
+  .date-container span {
+    font-size: 2.5rem;
+  }
+
+  .sidebar {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 870px) {
+  body {
+    overflow-y: scroll;
+  }
+  header h1 {
+    font-size: 1rem;
+  }
+  .disabled-container p {
+    font-size: 2rem;
+  }
+  .disabled-container form input {
+    height: 2.8rem;
+  }
+  .disabled-container form button {
+    height: 2.8rem;
+  }
+  .main-search {
+    display: none;
+    position: absolute;
+    top: 200rem;
+    margin-left: 0;
+  }
+  .alt-search {
+    display: flex;
+    position: relative;
+    height: 3.3rem;
+    width: 100%;
+  }
+  .alt-search input {
+    height: 3rem;
+    font-size: 1.3rem;
+    width: 90%;
+    position: relative;
+  }
+  .alt-search button {
+    height: 3.1rem;
+    width: 10%;
+  }
+  .sidebar {
+    background: transparent;
+    backdrop-filter: blur(0);
+    box-shadow: none;
+    position: relative;
+    width: 100%;
+    height: 14rem;
+    overflow: hidden;
+    justify-content: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar > div {
+    margin-left: 0;
+  }
+  .data-container {
+    width: 100%;
+    position: relative;
+    left: 0;
+    margin: 0;
+    height: 100%;
+    gap: 8rem;
+  }
+
+  .data-container h1 {
+    font-size: 1.7rem;
+  }
+
+  .date-container {
+    display: none;
+  }
+  .main-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .main-container > div:not(:nth-child(2)) {
+    display: none;
+  }
+
+  .location-time {
+    display: none;
+  }
+  .forecast ul li div i svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .forecast {
+    width: 100%;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: left;
+    justify-items: left;
+    align-items: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  .forecast ul {
+    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .forecast ul li {
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    width: 120%;
+    justify-content: space-evenly;
+    height: 4rem;
+    font-size: 1rem;
+    font-family: "Sansation", sans-serif;
+    font-weight: bold;
+    color: #fff;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  .forecast ul li:not(:last-child) {
+    border-bottom: 1px solid #fff;
+  }
+
+  .location {
+    margin-left: -4rem;
+  }
+}
+@media (max-width: 600px) {
+  .disabled-container p {
+    font-size: 1.7rem;
+  }
+  .data-container {
+    margin-top: -3rem;
+    gap: 3rem;
+  }
+  .location {
+    margin-left: -3rem;
+  }
+  .forecast ul li {
+    font-size: 0.6rem;
+    height: 3rem;
+  }
+  .forecast ul li div i svg {
+    width: 3rem;
+    height: 3rem;
+  }
+  .data-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .location h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .disabled-container p {
+    font-size: 1.3rem;
+    margin-top: 5rem;
+  }
+  .disabled-container form input {
+    font-size: 1rem;
+    width: 87%;
+  }
+  .disabled-container form button {
+    width: 13%;
+  }
+  header h1 {
+    font-size: 0.8rem;
+  }
+  .location h1 {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .disabled-container p {
+    font-size: 1rem;
+  }
+  .disabled-container form input {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+  .disabled-container form button {
+    width: 20%;
+  }
+  .data-container h1 {
+    font-size: 1rem;
+  }
+  .location h1 {
+    font-size: 1.2rem;
+  }
 }

@@ -4,17 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Home</title>
   </head>
   <body>
-    <div class="main">
-      <span id="name"></span>
-      <span id="country"></span>
-      <span id="temp"></span>
-      <span id="pressure"></span>
-      <span id="humidity"></span>
-      <span id="wind"></span>
+    <header>
+      <h1>Weatherly</h1>
+    </header>
+    <div class="main-container">
+      <div class="temp">
+        <h1><span class="temp-text"></span>&deg;</h1>
+      </div>
+
+      <div class="location">
+        <h1> <span id="name"></span>, <span id="country"></span> </h1>
+        <div class="location-time">
+          <p><span id="time"></span>, <span id="date-today"></span> </p>
+        </div>
+      </div>
+
+      <div class="icon-container">
+        <i class="icon">
+        
+        </i>
+      </div>
     </div>
+
+    <div class="sidebar">
+      <div class="date-container">
+        <span id="previous"><i class="bx bx-chevron-left"></i></span>
+        <h1><span id="date"></span></h1>
+        <span id="next"><i class="bx bx-chevron-right"></i></span>
+      </div>
+
+      <div class="data-container">
+        <div class="data-titles">
+          <h1>Temperature</h1>
+          <h1>Pressure</h1>
+          <h1>Humidity</h1>
+          <h1>Wind</h1>
+        </div>
+
+        <div class="data-values">
+          <h1> <span class="temp-text"></span>&deg;C</h1>
+          <h1> <span id="pressure"></span> hPa</h1>
+          <h1> <span id="humidity"></span>%</h1>
+          <h1> <span id="wind"></span> km\h</h1>
+        </div>
+      </div>
+
+
+      
+      
+      
+      <form class="search-container main-search" id="main-search">
+        <input type="text" placeholder="Change Location..." />
+        <button>
+          <span><i class="bx bx-search"></i></span>
+        </button>
+      </form>
+    </div>
+
+    <div class="forecast">
+      <ul>
+    </ul>
+    </div>
+    <form class="search-container alt-search" id="alt-search">
+      <input type="text" placeholder="Change Location..." />
+      <button>
+        <span><i class="bx bx-search"></i></span>
+      </button>
+    </form>
+  </div>
+
+
 
     <script
       type="text/javascript"
